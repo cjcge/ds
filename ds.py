@@ -129,7 +129,7 @@ with open("ds.txt", 'w', encoding='utf-8') as file:
     file.write('河北频道,#genre#\n')
     for result in results:
         channel_name, channel_url = result.split(',',1)
-        if '河北' in channel_name or '石家庄' in channel_name:
+        if '河北' in channel_name or '保定' in channel_name:
             if channel_name in channel_counters:
                 if channel_counters[channel_name] >= result_counter:
                     continue
@@ -172,7 +172,7 @@ with open("ds.txt", 'w', encoding='utf-8') as file:
     file.write('其他频道,#genre#\n')
     for result in results:
         channel_name, channel_url = result.split(',',1)
-        if 'CCTV' not in channel_name and '卫视' not in channel_name and '测试' not in channel_name and '河北' not in channel_name and '石家庄' not in channel_name:
+        if 'CCTV' not in channel_name and '卫视' not in channel_name and '测试' not in channel_name and '河北' not in channel_name and '保定' not in channel_name:
             if channel_name in channel_counters:
                 if channel_counters[channel_name] >= result_counter:
                     continue
